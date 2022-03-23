@@ -1,0 +1,11 @@
+<h1>Hello world!</h1>
+
+<a href="/demo/hello">Hello page 1</a><br />
+<%= link_to("Hello page 2", {action: 'hello'}) %>
+
+<br />
+
+<%= link_to("Hello with parameters", {action: 'hello', page: 5, id: 20}) %>
+
+
+<p><%= link_to("Home", {action: 'index'}) %> <%= link_to("Hello", {action: 'hello'}) %> <%= link_to("About Us", {action: 'about'}) %> <%= link_to("Contact Us", {action: 'contact', country: 'us'}) %></p>
