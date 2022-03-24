@@ -1,16 +1,4 @@
 Rails.application.routes.draw do
-  get 'pages/index'
-  get 'pages/show'
-  get 'pages/new'
-  get 'pages/edit'
-  get 'pages/delete'
-  
-  get 'subjects/index'
-  get 'subjects/show'
-  get 'subjects/new'
-  get 'subjects/edit'
-  get 'subjects/delete'
-
   # root route
   root 'demo#index'
 
@@ -20,8 +8,32 @@ Rails.application.routes.draw do
   get 'demo/contact'
   get 'demo/about'
 
+  resources :subjects do
+    member do
+      get :delete
+    end
+  end
+
+  resources :pages do
+    member do
+      get :delete
+    end
+  end
+
+  # get 'pages/index'
+  # get 'pages/show'
+  # get 'pages/new'
+  # get 'pages/edit'
+  # get 'pages/delete'
+
+  # get 'subjects/index'
+  # get 'subjects/show'
+  # get 'subjects/new'
+  # get 'subjects/edit'
+  # get 'subjects/delete'
+
   # default route
-  # get ':controller(/:action(/:id))'
+  # get ':controller(/:action(/:id))' 
 
 
 
